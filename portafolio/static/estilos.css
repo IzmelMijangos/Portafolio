@@ -1,0 +1,363 @@
+/* Estilos Base */
+
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed; /* Hace que el header se quede fijo en la parte superior */
+    width: 100%; /* Asegura que el header se extienda a lo ancho de la pantalla */
+    background: #fff; /* Color de fondo del header, cámbialo según tu diseño */
+    z-index: 1000; /* Asegura que el header se mantenga sobre otros elementos */
+    top: 0; /* Alinea el header en la parte superior de la página */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para el header */
+}
+
+.nav-wrapper {
+    max-width: 1200px; /* Ajusta según el ancho máximo deseado para tu contenido */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Esto centrará los elementos del menú */
+    align-items: center;
+}
+/* Estilos de Navegación */
+
+nav ul {
+    list-style: none; /* Remueve los estilos predeterminados de la lista */
+    padding: 0; /* Remueve el padding predeterminado */
+    margin: 0; /* Remueve el margin predeterminado */
+    display: flex; /* Alinea los elementos de la lista horizontalmente */
+    justify-content: center; /* Centra los elementos de la lista */
+}
+
+nav ul li {
+    margin: 0 10px; /* Espaciado entre elementos de la lista */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remueve el subrayado de los enlaces */
+    color: #333; /* Color del texto de los enlaces, cámbialo según tu diseño */
+    padding: 10px 15px; /* Espaciado alrededor del texto para hacer la zona clickeable más grande */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para los colores */
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #555; /* Color de fondo al pasar el mouse o enfocar */
+    color: #fff; /* Color del texto al pasar el mouse o enfocar */
+  }
+
+/* Estilos de Secciones Genéricas */
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Estilos de la sección de proyectos */
+.projects {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.project {
+    margin: 20px;
+}
+
+.project img {
+    max-width: 100%;
+}
+
+/* Estilos de la sección "Sobre Mí" */
+.about-me {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Estilos de la sección de contacto */
+.contact {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.habilidades-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.habilidades-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.habilidades-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.habilidad {
+    width: 150px; /* o el tamaño que prefieras */
+    margin: 10px;
+    text-align: center;
+}
+
+.habilidad img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+/* Añade estilos específicos para las imágenes si es necesario */
+/* Por ejemplo, para cambiar el tamaño o añadir algún efecto al pasar el mouse */
+.habilidad img:hover {
+    /* Efectos al pasar el mouse, como aumentar el tamaño o cambiar la opacidad */
+}
+
+.inicio-section {
+    background-color: #EDF2F4;
+    color: #333;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Asegúrate de que se ajuste en pantallas pequeñas */
+}
+
+.intro-column, .skills-column, .gallery-column {
+    flex-basis: 30%;
+    margin: 10px;
+}
+
+.intro-column h1 {
+    color: #2B2D42;
+}
+
+.skills-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-column li {
+    background-color: #D7263D;
+    color: #fff;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.gallery-column img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 3px solid #F49D37; /* Color de acento */
+}
+
+
+#inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background-color: #232741; /* Un color de fondo en caso de que las partículas no se carguen */
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #232741; /* Color de fondo similar al de la imagen */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.intro-text {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro-text p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-ver-trabajo {
+    padding: 10px 20px;
+    background-color: #D7263D; /* Color de la llamada a la acción */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-ver-trabajo:hover {
+    background-color: #F49D37; /* Color al hacer hover */
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+.contacto-section {
+    background-color: #2B2D42; /* Color de fondo oscuro */
+    color: white;
+    padding: 50px 0;
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%); /* Borde irregular */
+}
+
+.contacto-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacto-section h2 {
+    margin-bottom: 0.5em;
+}
+
+.contacto-section p {
+    margin-bottom: 1em;
+}
+
+.contacto-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: none;
+    background-color: #404B69; /* Color de fondo para los campos del formulario */
+    color: white;
+    border-radius: 5px;
+}
+
+.form-group button {
+    padding: 0.5em 2em;
+    background-color: #D7263D; /* Color de botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #F49D37; /* Color al hacer hover */
+}
+.habilidad img {
+    width: 200px; /* Cambia el valor al tamaño deseado */
+    height: auto; /* Esto mantiene la proporción original de la imagen */
+  }
+  .hamburger {
+    display: none; /* Ocultar por defecto, se mostrará en móviles */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 0.25rem;
+    background: #333;
+    border-radius: 10px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    padding: 0 10px; /* Ajusta el espaciado según necesites */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000000; /* Ajusta el color del texto según tu preferencia */
+    padding: 10px 15px; /* Ajusta el relleno según necesites */
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover, .navbar ul li a:focus {
+    color: #999; /* Ajusta el color al hacer hover/focus según tu preferencia */
+}
+
+  @media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Mostrar el botón hamburguesa */
+    }
+
+    .navbar ul {
+        display: none; /* Ocultar la lista de navegación */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar ul li a {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar.active ul {
+        display: flex; /* Mostrar la lista de navegación cuando esté activa */
+    }
+    .section {
+        padding: 50px 20px; /* Más padding en dispositivos pequeños */
+    }
+    .contacto-section {
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); /* Ajuste del borde irregular para pantallas más pequeñas */
+    }
+}
