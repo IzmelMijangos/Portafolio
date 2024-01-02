@@ -11,46 +11,68 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    position: fixed; /* Hace que el header se quede fijo en la parte superior */
-    width: 100%; /* Asegura que el header se extienda a lo ancho de la pantalla */
-    background: #fff; /* Color de fondo del header, cámbialo según tu diseño */
-    z-index: 1000; /* Asegura que el header se mantenga sobre otros elementos */
-    top: 0; /* Alinea el header en la parte superior de la página */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para el header */
+    position: fixed;
+    /* Hace que el header se quede fijo en la parte superior */
+    width: 100%;
+    /* Asegura que el header se extienda a lo ancho de la pantalla */
+    background: #fff;
+    /* Color de fondo del header, cámbialo según tu diseño */
+    z-index: 1000;
+    /* Asegura que el header se mantenga sobre otros elementos */
+    top: 0;
+    /* Alinea el header en la parte superior de la página */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para el header */
 }
 
 .nav-wrapper {
-    max-width: 1200px; /* Ajusta según el ancho máximo deseado para tu contenido */
+    max-width: 1200px;
+    /* Ajusta según el ancho máximo deseado para tu contenido */
     margin: 0 auto;
     display: flex;
-    justify-content: center; /* Esto centrará los elementos del menú */
+    justify-content: center;
+    /* Esto centrará los elementos del menú */
     align-items: center;
 }
+
 /* Estilos de Navegación */
 
 nav ul {
-    list-style: none; /* Remueve los estilos predeterminados de la lista */
-    padding: 0; /* Remueve el padding predeterminado */
-    margin: 0; /* Remueve el margin predeterminado */
-    display: flex; /* Alinea los elementos de la lista horizontalmente */
-    justify-content: center; /* Centra los elementos de la lista */
+    list-style: none;
+    /* Remueve los estilos predeterminados de la lista */
+    padding: 0;
+    /* Remueve el padding predeterminado */
+    margin: 0;
+    /* Remueve el margin predeterminado */
+    display: flex;
+    /* Alinea los elementos de la lista horizontalmente */
+    justify-content: center;
+    /* Centra los elementos de la lista */
 }
 
 nav ul li {
-    margin: 0 10px; /* Espaciado entre elementos de la lista */
+    margin: 0 10px;
+    /* Espaciado entre elementos de la lista */
 }
 
 nav ul li a {
-    text-decoration: none; /* Remueve el subrayado de los enlaces */
-    color: #333; /* Color del texto de los enlaces, cámbialo según tu diseño */
-    padding: 10px 15px; /* Espaciado alrededor del texto para hacer la zona clickeable más grande */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave para los colores */
+    text-decoration: none;
+    /* Remueve el subrayado de los enlaces */
+    color: #333;
+    /* Color del texto de los enlaces, cámbialo según tu diseño */
+    padding: 10px 15px;
+    /* Espaciado alrededor del texto para hacer la zona clickeable más grande */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transición suave para los colores */
 }
 
-nav ul li a:hover, nav ul li a:focus {
-    background-color: #555; /* Color de fondo al pasar el mouse o enfocar */
-    color: #fff; /* Color del texto al pasar el mouse o enfocar */
-  }
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #ddd3d3;
+    /* Color de fondo al pasar el mouse o enfocar */
+    color: #fff;
+    /* Color del texto al pasar el mouse o enfocar */
+}
 
 /* Estilos de Secciones Genéricas */
 .section {
@@ -107,13 +129,40 @@ footer {
 }
 
 .habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.habilidad {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.habilidad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.detalle-habilidad {
+    display: none;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.habilidades-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .habilidad {
-    width: 150px; /* o el tamaño que prefieras */
+    width: 150px;
+    /* o el tamaño que prefieras */
     margin: 10px;
     text-align: center;
 }
@@ -142,10 +191,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap; /* Asegúrate de que se ajuste en pantallas pequeñas */
+    flex-wrap: wrap;
+    /* Asegúrate de que se ajuste en pantallas pequeñas */
 }
 
-.intro-column, .skills-column, .gallery-column {
+.intro-column,
+.skills-column,
+.gallery-column {
     flex-basis: 30%;
     margin: 10px;
 }
@@ -169,7 +221,8 @@ footer {
 .gallery-column img {
     width: 100%;
     margin-bottom: 10px;
-    border: 3px solid #F49D37; /* Color de acento */
+    border: 3px solid #F49D37;
+    /* Color de acento */
 }
 
 
@@ -178,7 +231,8 @@ footer {
     width: 100%;
     height: 100vh;
     color: #fff;
-    background-color: #232741; /* Un color de fondo en caso de que las partículas no se carguen */
+    background-color: #232741;
+    /* Un color de fondo en caso de que las partículas no se carguen */
     overflow: hidden;
 }
 
@@ -186,7 +240,8 @@ footer {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #232741; /* Color de fondo similar al de la imagen */
+    background-color: #232741;
+    /* Color de fondo similar al de la imagen */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -213,14 +268,16 @@ footer {
 
 .btn-ver-trabajo {
     padding: 10px 20px;
-    background-color: #D7263D; /* Color de la llamada a la acción */
+    background-color: #D7263D;
+    /* Color de la llamada a la acción */
     color: white;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .btn-ver-trabajo:hover {
-    background-color: #F49D37; /* Color al hacer hover */
+    background-color: #F49D37;
+    /* Color al hacer hover */
 }
 
 
@@ -228,10 +285,12 @@ footer {
 /* ---------------------------------------------------------------------------------------------------------- */
 
 .contacto-section {
-    background-color: #2B2D42; /* Color de fondo oscuro */
+    background-color: #2B2D42;
+    /* Color de fondo oscuro */
     color: white;
     padding: 50px 0;
-    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%); /* Borde irregular */
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    /* Borde irregular */
 }
 
 .contacto-container {
@@ -257,18 +316,21 @@ footer {
     margin-bottom: 1em;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 0.5em;
     border: none;
-    background-color: #404B69; /* Color de fondo para los campos del formulario */
+    background-color: #404B69;
+    /* Color de fondo para los campos del formulario */
     color: white;
     border-radius: 5px;
 }
 
 .form-group button {
     padding: 0.5em 2em;
-    background-color: #D7263D; /* Color de botón */
+    background-color: #D7263D;
+    /* Color de botón */
     color: white;
     border: none;
     border-radius: 5px;
@@ -277,14 +339,20 @@ footer {
 }
 
 .form-group button:hover {
-    background-color: #F49D37; /* Color al hacer hover */
+    background-color: #F49D37;
+    /* Color al hacer hover */
 }
+
 .habilidad img {
-    width: 200px; /* Cambia el valor al tamaño deseado */
-    height: auto; /* Esto mantiene la proporción original de la imagen */
-  }
-  .hamburger {
-    display: none; /* Ocultar por defecto, se mostrará en móviles */
+    width: 200px;
+    /* Cambia el valor al tamaño deseado */
+    height: auto;
+    /* Esto mantiene la proporción original de la imagen */
+}
+
+.hamburger {
+    display: none;
+    /* Ocultar por defecto, se mostrará en móviles */
     flex-direction: column;
     justify-content: space-around;
     width: 2rem;
@@ -304,6 +372,35 @@ footer {
 
 .navbar {
     display: flex;
+    justify-content: space-between; /* Esto asegura que los contenedores estén en los extremos opuestos */
+    align-items: center;
+}
+.navbar .nav-links,
+.navbar .nav-social-links {
+    display: flex;
+}
+
+.navbar .nav-links ul,
+.navbar .nav-social-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li,
+.navbar .nav-social-links li {
+    padding: 0 10px;
+}
+
+.navbar .nav-links a,
+.navbar .nav-social-links a {
+    text-decoration: none;
+    color: #000000; /* O el color que desees para los enlaces */
+}
+
+.navbar .nav-social-links a {
+    font-size: 1.0em; /* O el tamaño que desees para los íconos de redes sociales */
 }
 
 .navbar ul {
@@ -311,32 +408,56 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: #333; /* Cambia este color al que desees */
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #007bff; /* Cambia este color al que desees */
+}
+
+.fab {
+    font-size: 1.5em; /* Ajusta el tamaño de los íconos según necesites */
+}
 .navbar ul li {
-    padding: 0 10px; /* Ajusta el espaciado según necesites */
+    padding: 0 10px;
+    /* Ajusta el espaciado según necesites */
 }
 
 .navbar ul li a {
     text-decoration: none;
-    color: #000000; /* Ajusta el color del texto según tu preferencia */
-    padding: 10px 15px; /* Ajusta el relleno según necesites */
+    color: #000000;
+    /* Ajusta el color del texto según tu preferencia */
+    padding: 10px 15px;
+    /* Ajusta el relleno según necesites */
     transition: color 0.3s;
 }
 
-.navbar ul li a:hover, .navbar ul li a:focus {
-    color: #999; /* Ajusta el color al hacer hover/focus según tu preferencia */
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    color: #999;
+    /* Ajusta el color al hacer hover/focus según tu preferencia */
 }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Mostrar el botón hamburguesa */
+        display: flex;
+        /* Mostrar el botón hamburguesa */
     }
 
     .navbar ul {
-        display: none; /* Ocultar la lista de navegación */
+        display: none;
+        /* Ocultar la lista de navegación */
         flex-direction: column;
         width: 100%;
     }
@@ -352,12 +473,347 @@ footer {
     }
 
     .navbar.active ul {
-        display: flex; /* Mostrar la lista de navegación cuando esté activa */
+        display: flex;
+        /* Mostrar la lista de navegación cuando esté activa */
     }
+
     .section {
-        padding: 50px 20px; /* Más padding en dispositivos pequeños */
+        padding: 50px 20px;
+        /* Más padding en dispositivos pequeños */
     }
+
     .contacto-section {
-        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); /* Ajuste del borde irregular para pantallas más pequeñas */
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        /* Ajuste del borde irregular para pantallas más pequeñas */
     }
+}
+
+
+/* Estilos de la sección "Sobre Mí" */
+.about-me {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.about-me-content,
+.about-me-image {
+    flex-basis: 45%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.about-me-actions {
+    /* Estilos existentes */
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+.about-me-content h2 {
+    margin-bottom: 1em;
+}
+
+.about-me-actions {
+    margin-top: 2em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    /* Asegura que los pseudo-elementos no se desborden */
+    position: relative;
+    /* Para posicionar pseudo-elementos */
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    /* Un poco más grande que el botón para un buen efecto */
+    height: 150%;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.btn:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    transition: opacity 0.3s, transform 0.3s, scale 0.3s;
+}
+
+.btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.btn:hover {
+    background-color: #003d82;
+}
+
+.btn-cv::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #0056b3;
+    transition: width 0.3s;
+    width: 0;
+    margin-top: 5px;
+}
+
+.btn-cv:hover::after {
+    width: 100%;
+}
+
+/* Ajustes de imagen */
+.about-me-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me-content,
+    .about-me-image {
+        flex-basis: 90%;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: block;
+        width: 60%;
+        margin: 10px auto;
+    }
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.icon-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    /* Tamaño del icono */
+    height: 50px;
+    /* Tamaño del icono */
+    margin-top: -25px;
+    /* Offset para centrar */
+    margin-left: -25px;
+    /* Offset para centrar */
+    animation: rotateAnimation 10s infinite linear;
+}
+
+
+.orbit-wrapper {
+    position: relative;
+    width: 400px;
+    /* Tamaño de la órbita */
+    height: 400px;
+    /* Tamaño de la órbita */
+    margin: 50px auto;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    /* Tamaño del icono */
+    height: 30px;
+    /* Tamaño del icono */
+    margin-top: -15px;
+    /* Ajuste para centrar el icono */
+    margin-left: -15px;
+    /* Ajuste para centrar el icono */
+    animation: orbit 15s infinite linear;
+    transform-origin: 150px 150px;
+}
+
+@keyframes orbit {
+    0% { transform: rotate(0deg) translateX(-45px); }
+    100% { transform: rotate(360deg) translateX(-45px); }
+}
+.icon img {
+    animation: orbit 150s infinite linear; /* Ajusta la duración según necesites */
+    display: block;
+    width: 100%; /* Ajustar según el tamaño del ícono */
+    height: auto;
+}
+
+.icon:nth-child(1) img {
+    animation-delay: 0s; /* Sin retraso para el primer ícono */
+}
+.icon:nth-child(2) img {
+    animation-delay: -10s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(3) img {
+    animation-delay: -20s; /* Sin retraso para el primer ícono */
+}
+.icon:nth-child(4) img {
+    animation-delay: -30s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(5) img {
+    animation-delay: -40s; /* Sin retraso para el primer ícono */
+}
+.icon:nth-child(6) img {
+    animation-delay: -50s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(7) img {
+    animation-delay: -60s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(8) img {
+    animation-delay: -60s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(9) img {
+    animation-delay: -60s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(10) img {
+    animation-delay: -70s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(11) img {
+    animation-delay: -80s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(12) img {
+    animation-delay: -90s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(13) img {
+    animation-delay: -100s; /* Retraso de 5 segundos para el segundo ícono */
+}
+.icon:nth-child(14) img {
+    animation-delay: -100s; /* Retraso de 5 segundos para el segundo ícono */
+}
+/* Colocar cada icono en la posición correcta en la órbita */
+.icon:nth-child(1) {
+    z-index: 1;
+}
+.icon:nth-child(2) {
+    z-index: 2;
+}
+.icon:nth-child(3) {
+    z-index: 3;
+}
+.icon:nth-child(4) {
+    z-index: 4;
+}
+.icon:nth-child(5) {
+    z-index: 5;
+}
+.icon:nth-child(6) {
+    z-index: 6;
+}
+.icon:nth-child(7) {
+    z-index: 7;
+}
+.icon:nth-child(8) {
+    z-index: 8;
+}
+.icon:nth-child(9) {
+    z-index: 9;
+}
+.icon:nth-child(10) {
+    z-index: 10;
+}
+.icon:nth-child(11) {
+    z-index: 11;
+}
+.icon:nth-child(12) {
+    z-index: 12;
+}
+.icon:nth-child(13) {
+    z-index: 13;
+}
+.icon:nth-child(14) {
+    z-index: 14;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Izmel Torres | Portafolio</title>
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="../static/index.js"></script>
 </head>
 <body>
@@ -16,13 +17,23 @@
             <span></span>
         </button>
         <nav class="navbar">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+            <!-- Contenedor para los enlaces de navegación -->
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#habilidades">Competencias Técnicas</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Contenedor para los íconos de las redes sociales -->
+            <div class="nav-social-links">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/izmeltorres" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/IzmelMijangos" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -31,33 +42,118 @@
         <div class="intro-text">
             <h1>Hola, soy Izmel Torres</h1>
             <p>Desarrollador Web Full-Stack.</p>
-            <a href="#habilidades" class="btn-ver-trabajo">Ver mi trabajo →</a>
+            <a href="#sobre-mi" class="btn-ver-trabajo">Descubre Más →</a>
         </div>
     </section>
 
     <section id="sobre-mi" class="about-me">
-        <h2>Sobre Mí</h2>
-        <p>Ingeniero en Mecatrónica con experiencia en desarrollo Full Stack, 
-            especializado en generar soluciones digitales de alto rendimiento. 
-            Mi agilidad para adaptarme y colaborar tanto de forma autónoma como 
-            en equipo es una de mis fortalezas clave. Dedicado al aprendizaje continuo, 
-            mantengo un conocimiento actualizado de las tendencias tecnológicas, lo que 
-            enriquece mi aporte en proyectos con ideas innovadoras. En la gestión de proyectos, 
-            valoro la comunicación y colaboración efectivas, elementos esenciales en metodologías 
-            ágiles. Busco roles que desafíen y expandan mi experiencia técnica y contribuyan al éxito empresarial.
-        </p>
+        <div class="container">
+            <div class="about-me-content">
+                <h2>Sobre Mí</h2>
+                <p>Soy Izmel Torres, un Ingeniero Mecatrónico y desarrollador Full Stack, me especializo en convertir desafíos complejos en sistemas eficientes y elegantes.
+
+                    Mi trayectoria se define por una constante evolución profesional. Manteniendo un conocimiento al día con las últimas tendencias tecnológicas, me gusta aportar a los proyectos ideas frescas y métodos probados que impulsan la innovación y eficacia operativa.
+                    
+                    Cuento con un historial de proyectos que hablan de compromiso y habilidad técnica, busco oportunidades que me permitan seguir creciendo profesionalmente y dejar una marca positiva en el sector tecnológico.
+                    
+                    Si buscas a un profesional que no solo entiende las tendencias actuales, sino que también contribuye a darles forma, te invito a conocer más sobre mi experiencia.
+                </p>
+                <div class="about-me-actions">
+                    <a href="{% static 'pdf/CV_IZMEL_TORRES_MIJANGOS.pdf' %}" target="_blank" class="btn btn-cv">Ver mi CV</a>
+                    <a href="#contacto" class="btn btn-contact">Contacto</a>
+                </div>
+            </div>
+
+            <div class="orbit-wrapper">
+                <div class="icon" style="transform-origin: 78px 75px;">
+                    <img src="{% static 'img/aws.png' %}" alt="AWS" title="aws service">
+                </div>
+                <div class="icon" style="transform-origin: 32px 100px;">
+                    <img src="{% static 'img/GitHub.png' %}" alt="GitHub" title="GitHub">
+                </div>
+                <div class="icon" style="transform-origin: 86px 0px;">
+                    <img src="{% static 'img/html.png' %}" alt="html">
+                </div>
+                <div class="icon" style="transform-origin: 119px -22px;">
+                    <img src="{% static 'img/java.png' %}" alt="java">
+                </div>
+                <div class="icon" style="transform-origin: -74px 100px;">
+                    <img src="{% static 'img/jira.png' %}" alt="jira">
+                </div>
+                <div class="icon" style="transform-origin: 41px -20px;">
+                    <img src="{% static 'img/javascript.png' %}" alt="javascript">
+                </div>
+                <div class="icon" style="transform-origin: 27px -51px;">
+                    <img src="{% static 'img/jenkins.png' %}" alt="jenkins">
+                </div>
+                <div class="icon" style="transform-origin: 100px -38px;">
+                    <img src="{% static 'img/nginx.png' %}" alt="nginx">
+                </div>
+                <div class="icon" style="transform-origin: 39px -76px;">
+                    <img src="{% static 'img/python.png' %}" alt="python">
+                </div>
+                <div class="icon" style="transform-origin: -53px 14px;">
+                    <img src="{% static 'img/react.png' %}" alt="react">
+                </div>
+                <div class="icon" style="transform-origin: 100px 100px;">
+                    <img src="{% static 'img/vue.png' %}" alt="vue">
+                </div>
+                <div class="icon" style="transform-origin: -94px -14px;">
+                    <img src="{% static 'img/flask.png' %}" alt="flask">
+                </div>
+                <div class="icon" style="transform-origin: 100px -52px;">
+                    <img src="{% static 'img/django.png' %}" alt="django">
+                </div>
+                <div class="icon" style="transform-origin: 55px -81px;">
+                    <img src="{% static 'img/agile.png' %}" alt="agile">
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="habilidades" class="habilidades-container">
-        <h2>Mis Habilidades</h2>
-        <div class="habilidades-grid">
-            <div class="habilidad">
-                <img src="{% static 'img/html5.png' %}" alt="HTML5">
-                <p>HTML5</p>
-            </div>
-            <div class="habilidad">
-                <img src="../static/img/Servicios AWS.png" alt="AWS">
-                <p>Servicios AWS</p>
+        <div class="container">
+            <h2>Competencias Técnicas</h2>
+            <div class="habilidades-grid">
+                <!-- Tarjeta de habilidad para HTML5 -->
+                <div class="habilidad" onclick="toggleDetail(this)">
+                    <img src="{% static 'img/Servicios AWS.png' %}" alt="HTML5">
+                    <p>Desarrollo de Software</p>
+                    <div class="detalle-habilidad">
+                        <p>Profundo conocimiento en la creación de aplicaciones robustas y de alto rendimiento. Amplia experiencia en el ciclo completo de desarrollo de software desde la concepción hasta la implementación y el mantenimiento.
+
+                            Backend: Diseño y desarrollo de arquitecturas de servidor, API y microservicios utilizando [lenguajes/tecnologías que usas].
+                            Frontend: Creación de interfaces de usuario interactivas y responsivas con [lenguajes/tecnologías que usas].</p>
+                    </div>
+                </div>
+                <!-- Tarjeta de habilidad para AWS -->
+                <div class="habilidad" onclick="toggleDetail(this)">
+                    <img src="{% static 'img/aws.png' %}" alt="AWS">
+                    <p> Infraestructura y Operaciones (DevOps)</p>
+                    <div class="detalle-habilidad">
+                        <p>Aplicación de principios de DevOps para mejorar la colaboración entre desarrollo y operaciones, incrementando la eficiencia en la entrega de software y la escalabilidad de infraestructura.
+
+                            Automatización de CI/CD: Implementación de pipelines de integración continua y entrega/deploy continua con [herramientas que usas].
+                            Orquestación de Contenedores: Manejo de contenedores y microservicios en entornos de producción utilizando [herramientas que usas].</p>
+                    </div>
+                </div>
+                <div class="habilidad" onclick="toggleDetail(this)">
+                    <img src="{% static 'img/aws.png' %}" alt="AWS">
+                    <p> Cloud Computing y Servicios AWS</p>
+                    <div class="detalle-habilidad">
+                        <p>Gestión y optimización de servicios en la nube para escalabilidad, seguridad y coste efectividad, especializado en el ecosistema de AWS.
+
+                            Computación en la Nube: Configuración y mantenimiento de sistemas escalables y tolerantes a fallos en AWS.
+                            Servicios AWS Específicos: Experiencia con [lista los servicios de AWS que manejas], diseñando soluciones seguras y optimizadas para la nube.</p>
+                    </div>
+                </div>
+                <div class="habilidad" onclick="toggleDetail(this)">
+                    <img src="{% static 'img/aws.png' %}" alt="AWS">
+                    <p>Servicios AWS</p>
+                    <div class="detalle-habilidad">
+                        <p>Implementación y gestión de infraestructuras escalables y seguras en la nube.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -81,8 +177,9 @@
     <section id="contacto" class="contacto-section">
         <div class="contacto-container">
             <h2>CONTACTO</h2>
-            <p>¿Tiene alguna pregunta? No dudes en contactarme.</p>
-            <form action="" method="post">
+            <p>Estoy aquí para ayudarte. Si tienes preguntas o comentarios, escríbeme y responderé a la brevedad posible.</p>
+            <form action="{% url 'contacto' %}" method="post">
+                {% csrf_token %}
                 <div class="form-group">
                     <input type="text" name="nombre" placeholder="Nombre" required>
                 </div>
@@ -96,9 +193,9 @@
                     <button type="submit">Enviar Mensaje</button>
                 </div>
             </form>
+            <div id="message-container" style="display: none;"></div>
         </div>
     </section>
-
     <footer>
         <p>Realizado por IzmelTorres &copy; 2023 Amsi Design</p>
     </footer>
@@ -127,10 +224,66 @@
             navMenu.classList.toggle('active');
         });
 
-        // Cerrar el menú de hamburguesa al hacer clic en un enlace
+        
         document.querySelectorAll('.navbar ul li a').forEach(n => n.addEventListener('click', () => {
             hamburger.classList.remove('is-active');
             navMenu.classList.remove('active');
         }));
+
+        var observer = new IntersectionObserver(function(entries) {
+            console.log("Si entra");
+            entries.forEach(entry => {
+            
+            if (entry.isIntersecting) {
+                
+                entry.target.classList.add("slide-in");
+            }
+            });
+        });
+
+       
+        var target = document.querySelector('#sobre-mi');
+        observer.observe(target);
+
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            const formData = new FormData(form);
+            fetch("{% url 'contacto' %}", {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}', 
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                const messageContainer = document.getElementById('message-container');
+                messageContainer.innerHTML = `<div class="alert ${data.status === 'success' ? 'alert-success' : 'alert-danger'} alert-dismissible fade show" role="alert">${data.message}</div>`;
+                messageContainer.style.display = 'block';
+                if(data.status === 'success') {
+                    form.reset();
+                }
+                setTimeout(function(){
+                    messageContainer.style.display = 'none';
+                }, 10000); 
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                const messageContainer = document.getElementById('message-container');
+                messageContainer.innerHTML = '<div class="alert alert-danger" role="alert">Ocurrió un error al enviar el mensaje.</div>';
+                messageContainer.style.display = 'block';
+                
+                setTimeout(function(){
+                    messageContainer.style.display = 'none';
+                }, 10000); 
+            });
+        });
     });
+    function toggleDetail(element) {
+    var detalle = element.querySelector('.detalle-habilidad');
+    var isVisible = detalle.style.display === 'block';
+    detalle.style.display = isVisible ? 'none' : 'block';
+}
 </script>

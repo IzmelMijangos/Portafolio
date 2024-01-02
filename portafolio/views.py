@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.http import JsonResponse
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect
+from django.conf import settings
+from .forms import ContactForm
 
 def index(request):
-    # Aquí puedes definir tus datos codificados, como ejemplos de proyectos, habilidades, etc.
     proyectos = [
         {
             'nombre': 'Proyecto Uno',
@@ -10,14 +13,11 @@ def index(request):
             'descripcion': 'Descripción breve del proyecto uno...',
             'link': 'http://linkalproyecto1.com'
         },
-        # ... más proyectos
     ]
 
     habilidades = [
         {'nombre': 'Python', 'nivel': 'Intermedio', 'icono': 'python-icon.png'},
-        # ... más habilidades
     ]
-
     experiencias = [
         {
             'empresa': 'Empresa Uno',
@@ -26,15 +26,34 @@ def index(request):
             'fin': 'Actualidad',
             'descripcion': 'Descripción de las responsabilidades y logros...'
         },
-        # ... más experiencias
     ]
-
-    # Cualquier otro dato que quieras pasar a la plantilla
     context = {
         'proyectos': proyectos,
         'habilidades': habilidades,
         'experiencias': experiencias
     }
-
-    # Renderizas la plantilla HTML con tu contexto
     return render(request, 'index.html', context)
+
+def send_contact_email(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            nombre = form.cleaned_data['nombre']
+            email = form.cleaned_data['email']
+            mensaje = form.cleaned_data['mensaje']
+            
+            subject = f"Nuevo mensaje de contacto de {nombre}"
+            message = f"Recibiste un nuevo mensaje de contacto en tu sitio web:\n\n"
+            message += f"Nombre: {nombre}\nEmail: {email}\nMensaje:\n{mensaje}"
+            
+            send_mail(
+                subject,
+                message,
+                settings.EMAIL_HOST_USER,
+                [settings.EMAIL_HOST_USER],
+                fail_silently=False,
+            )
+            
+            return JsonResponse({'status': 'success', 'message': 'Correo enviado satisfactoriamente.'})
+        else:
+            return JsonResponse({'status': 'error', 'message': 'Formulario inválido.'})
