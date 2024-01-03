@@ -1,5 +1,4 @@
 /* Estilos Base */
-
 body {
     font-family: cursive;
     margin: 0;
@@ -12,26 +11,18 @@ header {
     color: #fff;
     padding: 10px 0;
     position: fixed;
-    /* Hace que el header se quede fijo en la parte superior */
     width: 100%;
-    /* Asegura que el header se extienda a lo ancho de la pantalla */
     background: #fff;
-    /* Color de fondo del header, cámbialo según tu diseño */
     z-index: 1000;
-    /* Asegura que el header se mantenga sobre otros elementos */
     top: 0;
-    /* Alinea el header en la parte superior de la página */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil para el header */
 }
 
 .nav-wrapper {
     max-width: 1200px;
-    /* Ajusta según el ancho máximo deseado para tu contenido */
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    /* Esto centrará los elementos del menú */
     align-items: center;
 }
 
@@ -93,13 +84,6 @@ nav ul li a:focus {
 
 .project img {
     max-width: 100%;
-}
-
-/* Estilos de la sección "Sobre Mí" */
-.about-me {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-    text-align: center;
 }
 
 /* Estilos de la sección de contacto */
@@ -171,12 +155,6 @@ footer {
     max-width: 100%;
     height: auto;
     margin-bottom: 8px;
-}
-
-/* Añade estilos específicos para las imágenes si es necesario */
-/* Por ejemplo, para cambiar el tamaño o añadir algún efecto al pasar el mouse */
-.habilidad img:hover {
-    /* Efectos al pasar el mouse, como aumentar el tamaño o cambiar la opacidad */
 }
 
 .inicio-section {
@@ -280,8 +258,6 @@ footer {
     /* Color al hacer hover */
 }
 
-
-
 /* ---------------------------------------------------------------------------------------------------------- */
 
 .contacto-section {
@@ -372,9 +348,11 @@ footer {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Esto asegura que los contenedores estén en los extremos opuestos */
+    justify-content: space-between;
+    /* Esto asegura que los contenedores estén en los extremos opuestos */
     align-items: center;
 }
+
 .navbar .nav-links,
 .navbar .nav-social-links {
     display: flex;
@@ -396,11 +374,13 @@ footer {
 .navbar .nav-links a,
 .navbar .nav-social-links a {
     text-decoration: none;
-    color: #000000; /* O el color que desees para los enlaces */
+    color: #000000;
+    /* O el color que desees para los enlaces */
 }
 
 .navbar .nav-social-links a {
-    font-size: 1.0em; /* O el tamaño que desees para los íconos de redes sociales */
+    font-size: 1.0em;
+    /* O el tamaño que desees para los íconos de redes sociales */
 }
 
 .navbar ul {
@@ -418,17 +398,21 @@ footer {
 }
 
 .navbar a {
-    color: #333; /* Cambia este color al que desees */
+    color: #333;
+    /* Cambia este color al que desees */
     text-decoration: none;
 }
 
 .navbar a:hover {
-    color: #007bff; /* Cambia este color al que desees */
+    color: #007bff;
+    /* Cambia este color al que desees */
 }
 
 .fab {
-    font-size: 1.5em; /* Ajusta el tamaño de los íconos según necesites */
+    font-size: 1.5em;
+    /* Ajusta el tamaño de los íconos según necesites */
 }
+
 .navbar ul li {
     padding: 0 10px;
     /* Ajusta el espaciado según necesites */
@@ -722,98 +706,312 @@ footer {
 }
 
 @keyframes orbit {
-    0% { transform: rotate(0deg) translateX(-45px); }
-    100% { transform: rotate(360deg) translateX(-45px); }
+    0% {
+        transform: rotate(0deg) translateX(-45px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(-45px);
+    }
 }
+
 .icon img {
-    animation: orbit 150s infinite linear; /* Ajusta la duración según necesites */
+    animation: orbit 150s infinite linear;
+    /* Ajusta la duración según necesites */
     display: block;
-    width: 100%; /* Ajustar según el tamaño del ícono */
+    width: 100%;
+    /* Ajustar según el tamaño del ícono */
     height: auto;
 }
 
 .icon:nth-child(1) img {
-    animation-delay: 0s; /* Sin retraso para el primer ícono */
+    animation-delay: 0s;
+    /* Sin retraso para el primer ícono */
 }
+
 .icon:nth-child(2) img {
-    animation-delay: -10s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -10s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(3) img {
-    animation-delay: -20s; /* Sin retraso para el primer ícono */
+    animation-delay: -20s;
+    /* Sin retraso para el primer ícono */
 }
+
 .icon:nth-child(4) img {
-    animation-delay: -30s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -30s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(5) img {
-    animation-delay: -40s; /* Sin retraso para el primer ícono */
+    animation-delay: -40s;
+    /* Sin retraso para el primer ícono */
 }
+
 .icon:nth-child(6) img {
-    animation-delay: -50s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -50s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(7) img {
-    animation-delay: -60s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -60s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(8) img {
-    animation-delay: -60s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -60s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(9) img {
-    animation-delay: -60s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -60s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(10) img {
-    animation-delay: -70s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -70s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(11) img {
-    animation-delay: -80s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -80s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(12) img {
-    animation-delay: -90s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -90s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(13) img {
-    animation-delay: -100s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -100s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 .icon:nth-child(14) img {
-    animation-delay: -100s; /* Retraso de 5 segundos para el segundo ícono */
+    animation-delay: -100s;
+    /* Retraso de 5 segundos para el segundo ícono */
 }
+
 /* Colocar cada icono en la posición correcta en la órbita */
 .icon:nth-child(1) {
     z-index: 1;
 }
+
 .icon:nth-child(2) {
     z-index: 2;
 }
+
 .icon:nth-child(3) {
     z-index: 3;
 }
+
 .icon:nth-child(4) {
     z-index: 4;
 }
+
 .icon:nth-child(5) {
     z-index: 5;
 }
+
 .icon:nth-child(6) {
     z-index: 6;
 }
+
 .icon:nth-child(7) {
     z-index: 7;
 }
+
 .icon:nth-child(8) {
     z-index: 8;
 }
+
 .icon:nth-child(9) {
     z-index: 9;
 }
+
 .icon:nth-child(10) {
     z-index: 10;
 }
+
 .icon:nth-child(11) {
     z-index: 11;
 }
+
 .icon:nth-child(12) {
     z-index: 12;
 }
+
 .icon:nth-child(13) {
     z-index: 13;
 }
+
 .icon:nth-child(14) {
     z-index: 14;
+}
+
+.btn-modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1051;
+    /* El z-index debería ser mayor que el del modal-body */
+}
+
+
+/* Estilos del modal */
+.modal-content {
+    color: rgb(8, 8, 8);
+    /* Texto en blanco para contraste */
+    border-radius: 1.3rem !important;
+    /* Esquinas redondeadas */
+}
+
+.modal-header {
+    border-bottom: 1px solid #444;
+    /* Borde más sutil para el encabezado */
+}
+
+/* Botones de navegación estilizados */
+.btn-modal-nav {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fondo semi-transparente */
+    border: none;
+    /* Sin bordes */
+    color: white;
+    /* Icono en blanco */
+    width: 40px;
+    /* Ancho fijo para el botón */
+    height: 40px;
+    /* Altura fija para el botón */
+    border-radius: 20px;
+    /* Hacer el botón redondo */
+    align-items: center;
+    /* Centrar el icono verticalmente */
+    justify-content: center;
+    /* Centrar el icono horizontalmente */
+    display: flex;
+    /* Usar flexbox para centrar el contenido */
+    cursor: pointer;
+    /* Cambiar el cursor a pointer */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra para resaltar el botón */
+}
+
+/* Ajustar la posición de los botones de navegación */
+.btn-modal-nav.left {
+    left: -45px;
+    /* Ajustar para colocar a la izquierda fuera del modal */
+}
+
+.btn-modal-nav.right {
+    right: -45px;
+    /* Ajustar para colocar a la derecha fuera del modal */
+}
+
+/* Esconder los botones de navegación cuando no hay hover */
+.btn-modal-nav {
+    opacity: 0.5;
+    /* Semi-transparente por defecto */
+    transition: opacity 0.3s;
+    /* Transición suave para el hover */
+}
+
+/* Mostrar claramente los botones de navegación al hacer hover */
+.btn-modal-nav:hover {
+    opacity: 1;
+    /* Totalmente visible en hover */
+}
+
+/* Estilos para el botón de cerrar personalizado */
+.modal-header .close {
+    color: white;
+    /* Cambiar color del botón de cerrar */
+    opacity: 1;
+    /* Asegurarse de que el botón de cerrar sea completamente visible */
+}
+
+/* Asegurarse de que el fondo oscuro del modal sea un poco más oscuro */
+.modal-backdrop.show {
+    opacity: 0.8 !important;
+    /* Ajustar la opacidad del fondo */
+}
+
+.modal-dialog {
+    max-width: 800px;
+    /* O el ancho que prefieras */
+    margin: 30px auto;
+}
+
+/* Asegúrate de que el modal sea responsive y se vea bien en dispositivos móviles */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 90%;
+        /* O cualquier otro porcentaje que se adapte mejor a dispositivos más pequeños */
+    }
+}
+
+.btn-modal-nav i {
+    font-size: 24px;
+    /* Ajusta el tamaño de los íconos de las flechas */
+    color: white;
+    /* Asegúrate de que el color de las flechas sea claro */
+}
+
+
+.projects .project {
+    position: relative;
+    width: 100%;
+    /* O el ancho deseado para cada proyecto */
+    overflow: hidden;
+    /* Asegura que el overlay no se desborde */
+}
+
+.projects .project img {
+    width: 100%;
+    /* Asegura que la imagen cubra todo el ancho del contenedor */
+    display: block;
+    transition: transform 0.3s ease;
+    /* Transición suave para el efecto zoom */
+}
+
+.projects .project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro con transparencia */
+    color: white;
+    opacity: 0;
+    /* Inicialmente oculto */
+    transition: opacity 0.3s ease;
+    /* Transición suave para la opacidad */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    padding: 20px;
+    /* Espacio interior */
+}
+
+/* Cambia el estilo al pasar el ratón */
+.projects .project:hover .overlay {
+    opacity: 1;
+    /* Muestra el overlay */
+}
+
+.projects .project:hover img {
+    transform: scale(1.1);
+    /* Efecto zoom a la imagen */
+}
+
+.projects .project .project-link {
+    display: block;
+    position: relative;
+    /* ... */
 }

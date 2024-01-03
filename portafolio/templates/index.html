@@ -7,7 +7,18 @@
     <title>Izmel Torres | Portafolio</title>
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/amsi.png' %}">
     <script src="../static/index.js"></script>
+    <!-- Incluir CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Incluir JS de Bootstrap y sus dependencias -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
 </head>
 <body>
     <header>
@@ -41,7 +52,7 @@
         <div id="particles-js"></div> 
         <div class="intro-text">
             <h1>Hola, soy Izmel Torres</h1>
-            <p>Desarrollador Web Full-Stack.</p>
+            <p style="margin-bottom:45px;">Desarrollador Web Full-Stack.</p>
             <a href="#sobre-mi" class="btn-ver-trabajo">Descubre Más →</a>
         </div>
     </section>
@@ -113,11 +124,11 @@
 
     <section id="habilidades" class="habilidades-container">
         <div class="container">
-            <h2>Competencias Técnicas</h2>
+            <h2 style="margin-top: 50px;">Competencias Técnicas</h2>
             <div class="habilidades-grid">
                 <!-- Tarjeta de habilidad para HTML5 -->
-                <div class="habilidad" onclick="toggleDetail(this)">
-                    <img src="{% static 'img/Servicios AWS.png' %}" alt="HTML5">
+                <div class="habilidad" onclick="toggleDetail(0)">
+                    <img src="{% static 'img/FrontBack.jpg' %}" alt="HTML5">
                     <p>Desarrollo de Software</p>
                     <div class="detalle-habilidad">
                         <p>Profundo conocimiento en la creación de aplicaciones robustas y de alto rendimiento. Amplia experiencia en el ciclo completo de desarrollo de software desde la concepción hasta la implementación y el mantenimiento.
@@ -127,8 +138,8 @@
                     </div>
                 </div>
                 <!-- Tarjeta de habilidad para AWS -->
-                <div class="habilidad" onclick="toggleDetail(this)">
-                    <img src="{% static 'img/aws.png' %}" alt="AWS">
+                <div class="habilidad" onclick="toggleDetail(1)">
+                    <img src="{% static 'img/DevOps.svg' %}" alt="AWS">
                     <p> Infraestructura y Operaciones (DevOps)</p>
                     <div class="detalle-habilidad">
                         <p>Aplicación de principios de DevOps para mejorar la colaboración entre desarrollo y operaciones, incrementando la eficiencia en la entrega de software y la escalabilidad de infraestructura.
@@ -137,8 +148,8 @@
                             Orquestación de Contenedores: Manejo de contenedores y microservicios en entornos de producción utilizando [herramientas que usas].</p>
                     </div>
                 </div>
-                <div class="habilidad" onclick="toggleDetail(this)">
-                    <img src="{% static 'img/aws.png' %}" alt="AWS">
+                <div class="habilidad" onclick="toggleDetail(2)">
+                    <img src="{% static 'img/Servicios AWS.png' %}" alt="HTML5">
                     <p> Cloud Computing y Servicios AWS</p>
                     <div class="detalle-habilidad">
                         <p>Gestión y optimización de servicios en la nube para escalabilidad, seguridad y coste efectividad, especializado en el ecosistema de AWS.
@@ -147,28 +158,57 @@
                             Servicios AWS Específicos: Experiencia con [lista los servicios de AWS que manejas], diseñando soluciones seguras y optimizadas para la nube.</p>
                     </div>
                 </div>
-                <div class="habilidad" onclick="toggleDetail(this)">
-                    <img src="{% static 'img/aws.png' %}" alt="AWS">
-                    <p>Servicios AWS</p>
+                <div class="habilidad" onclick="toggleDetail(3)">
+                    <img src="{% static 'img/Arquitectura.jpg' %}" alt="Arquitectura de Software">
+                    <p>Arquitectura de Software</p>
                     <div class="detalle-habilidad">
-                        <p>Implementación y gestión de infraestructuras escalables y seguras en la nube.</p>
+                        <p>Como Arquitecto de Software, especializado en diseñar soluciones escalables y sostenibles, me enfoco en la creación de arquitecturas resilientes que respalden los objetivos de negocio y la innovación continua. Mis competencias abarcan:</p>
+                        <ul>
+                            <li>Definición de arquitecturas de microservicios para facilitar el despliegue ágil y la mantenibilidad.</li>
+                            <li>Implementación de patrones de diseño y arquitectónicos que aseguran la cohesión y la baja acoplamiento.</li>
+                            <li>Evaluación y adopción de tecnologías emergentes para mantener las soluciones tecnológicas alineadas con las mejores prácticas del sector.</li>
+                            <li>Colaboración estrecha con equipos de desarrollo para garantizar la aplicación efectiva de los principios arquitectónicos.</li>
+                            <li>Gestión de riesgos técnicos y aseguramiento de la calidad a través de revisiones de código y pruebas automatizadas.</li>
+                        </ul>
+                        <p>Mi enfoque pragmático y centrado en el usuario final garantiza que las arquitecturas desarrolladas no solo son técnicamente sólidas, sino también alineadas con las necesidades comerciales y la experiencia del usuario.</p>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
-    <section id="proyectos" class="projects">
+    <section id="proyectos" class="projects container" style="margin-bottom: 9%;">
         <h2>Proyectos Destacados</h2>
-        <div class="project">
-            <img src="proyecto1.jpg" alt="Proyecto 1">
-            <h3>Proyecto 1</h3>
-            <p>Descripción del proyecto 1.</p>
-        </div>
-        <div class="project">
-            <img src="proyecto2.jpg" alt="Proyecto 2">
-            <h3>Proyecto 2</h3>
-            <p>Descripción del proyecto 2.</p>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 project">
+                <a href="http://mezcal.amsidesign.com/" class="project-link">
+                    <img src="{% static 'img/mezcal.png' %}" alt="Arquitectura de Software">
+                    <div class="overlay">
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción del proyecto 1.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 project">
+                <a href="http://mezcal.amsidesign.com/" class="project-link">
+                    <img src="{% static 'img/mezcal.png' %}" alt="Arquitectura de Software">
+                    <div class="overlay">
+                        <h3>Proyecto 2</h3>
+                        <p>Descripción del proyecto 2.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 project">
+                <a href="http://mezcal.amsidesign.com/" class="project-link">
+                    <img src="{% static 'img/mezcal.png' %}" alt="Arquitectura de Software">
+                    <div class="overlay">
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción del proyecto 1.</p>
+                    </div>
+                </a>
+            </div>
+            
         </div>
     </section>
 
@@ -197,11 +237,33 @@
         </div>
     </section>
     <footer>
-        <p>Realizado por IzmelTorres &copy; 2023 Amsi Design</p>
+        <p>Realizado por IzmelTorres &copy; 2024 Amsi Design</p>
     </footer>
 
 </body>
 </html>
+
+<div class="modal fade" id="habilidadesModal" tabindex="-1" aria-labelledby="habilidadesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="habilidadesModalLabel">Detalles de la Habilidad</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- El contenido del modal se llenará dinámicamente con JavaScript -->
+        </div>
+        <button type="button" class="btn-modal-nav left" onclick="navigate(-1)">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <button type="button" class="btn-modal-nav right" onclick="navigate(1)">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 
 <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -212,10 +274,16 @@
             });
         });
     });
-</script>
 
-<script>
     document.addEventListener('DOMContentLoaded', function () {
+        // Event listener para teclas de flecha
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "ArrowLeft") {
+            navigate(-1);
+            } else if (event.key === "ArrowRight") {
+            navigate(1);
+            }
+        });
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.navbar');
 
@@ -231,7 +299,6 @@
         }));
 
         var observer = new IntersectionObserver(function(entries) {
-            console.log("Si entra");
             entries.forEach(entry => {
             
             if (entry.isIntersecting) {
@@ -281,9 +348,50 @@
             });
         });
     });
-    function toggleDetail(element) {
-    var detalle = element.querySelector('.detalle-habilidad');
-    var isVisible = detalle.style.display === 'block';
-    detalle.style.display = isVisible ? 'none' : 'block';
-}
+    function toggleDetail(index) {
+        // Obtén la tarjeta de habilidad y sus detalles
+        var habilidad = document.getElementsByClassName('habilidad')[index];
+        var title = habilidad.querySelector('p').textContent;
+        var details = habilidad.querySelector('.detalle-habilidad').innerHTML;
+        var imageSrc = habilidad.querySelector('img').src; // Obtén la fuente de la imagen
+
+        // Llena el modal con la información de la habilidad
+        var modalTitle = document.getElementById('habilidadesModalLabel');
+        var modalBody = document.getElementById('habilidadesModal').querySelector('.modal-body');
+
+        modalTitle.textContent = title; // Establece el título del modal
+        modalBody.innerHTML = `<img src="${imageSrc}" class="img-fluid" alt="${title}">` + details; // Añade la imagen al cuerpo del modal
+
+        // Guarda el índice actual de la habilidad
+        modalBody.setAttribute('data-current-index', index);
+
+        // Muestra el modal
+        $('#habilidadesModal').modal('show');
+    }    
+
+
+    var habilidades = document.querySelectorAll('.habilidad');
+    var currentIndex = 0;
+
+    function showHabilidad(index) {
+        toggleDetail(habilidades[index]);
+        currentIndex = index;
+    }
+
+
+    function navigate(step) {
+        var modalBody = document.getElementById('habilidadesModal').querySelector('.modal-body');
+        var currentIndex = parseInt(modalBody.getAttribute('data-current-index'), 10);
+        var newIndex = currentIndex + step;
+        var habilidades = document.getElementsByClassName('habilidad');
+
+        // Ciclo de navegación
+        if (newIndex < 0) {
+            newIndex = habilidades.length - 1;
+        } else if (newIndex >= habilidades.length) {
+            newIndex = 0;
+        }
+
+        toggleDetail(newIndex);
+    }
 </script>
