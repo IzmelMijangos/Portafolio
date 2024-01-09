@@ -62,16 +62,13 @@
             <div class="about-me-content">
                 <h2>Sobre Mí</h2>
                 <p>Soy Izmel Torres, un Ingeniero Mecatrónico y desarrollador Full Stack, me especializo en convertir desafíos complejos en sistemas eficientes y elegantes.
-
                     Mi trayectoria se define por una constante evolución profesional. Manteniendo un conocimiento al día con las últimas tendencias tecnológicas, me gusta aportar a los proyectos ideas frescas y métodos probados que impulsan la innovación y eficacia operativa.
-                    
                     Cuento con un historial de proyectos que hablan de compromiso y habilidad técnica, busco oportunidades que me permitan seguir creciendo profesionalmente y dejar una marca positiva en el sector tecnológico.
-                    
                     Si buscas a un profesional que no solo entiende las tendencias actuales, sino que también contribuye a darles forma, te invito a conocer más sobre mi experiencia.
                 </p>
                 <div class="about-me-actions">
-                    <a href="{% static 'pdf/CV_IZMEL_TORRES_MIJANGOS.pdf' %}" target="_blank" class="btn btn-cv">Ver mi CV</a>
-                    <a href="#contacto" class="btn btn-contact">Contacto</a>
+                    <a href="{% static 'pdf/CV_IZMEL_TORRES_MIJANGOS.pdf' %}" target="_blank" class="btn">Ver mi CV</a>
+                    <a href="#contacto" class="btn">Contacto</a>
                 </div>
             </div>
 
@@ -118,6 +115,12 @@
                 <div class="icon" style="transform-origin: 55px -81px;">
                     <img src="{% static 'img/agile.png' %}" alt="agile">
                 </div>
+                <div class="icon" style="transform-origin: -53px -81px;">
+                    <img src="{% static 'img/docker.png' %}" alt="agile">
+                </div>
+                <div class="icon" style="transform-origin: -53px 81px;">
+                    <img src="{% static 'img/linux.png' %}" alt="agile">
+                </div>
             </div>
         </div>
     </section>
@@ -133,8 +136,8 @@
                     <div class="detalle-habilidad">
                         <p>Profundo conocimiento en la creación de aplicaciones robustas y de alto rendimiento. Amplia experiencia en el ciclo completo de desarrollo de software desde la concepción hasta la implementación y el mantenimiento.
 
-                            Backend: Diseño y desarrollo de arquitecturas de servidor, API y microservicios utilizando [lenguajes/tecnologías que usas].
-                            Frontend: Creación de interfaces de usuario interactivas y responsivas con [lenguajes/tecnologías que usas].</p>
+                            Backend: Diseño y desarrollo de arquitecturas de servidor, API y microservicios utilizando Django, Flask, Spring Boot, así como el uso de MySQL y Postgresql para el manejo de los datos.
+                            Frontend: Creación de interfaces de usuario interactivas y responsivas con Vue.js, React, JavaScript.</p>
                     </div>
                 </div>
                 <!-- Tarjeta de habilidad para AWS -->
@@ -143,9 +146,10 @@
                     <p> Infraestructura y Operaciones (DevOps)</p>
                     <div class="detalle-habilidad">
                         <p>Aplicación de principios de DevOps para mejorar la colaboración entre desarrollo y operaciones, incrementando la eficiencia en la entrega de software y la escalabilidad de infraestructura.
-
-                            Automatización de CI/CD: Implementación de pipelines de integración continua y entrega/deploy continua con [herramientas que usas].
-                            Orquestación de Contenedores: Manejo de contenedores y microservicios en entornos de producción utilizando [herramientas que usas].</p>
+                    
+                            Automatización de CI/CD: Implementación de pipelines de integración continua y entrega/deploy continua con Jenkins, GitHub Actions y GitLab CI para el control de versiones y la automatización del flujo de trabajo de software.
+                    
+                            Orquestación de Contenedores: Manejo de contenedores y microservicios en entornos de producción utilizando Docker, y Amazon Web Services (AWS) para la gestión y escalado eficiente de aplicaciones.</p>
                     </div>
                 </div>
                 <div class="habilidad" onclick="toggleDetail(2)">
@@ -153,9 +157,10 @@
                     <p> Cloud Computing y Servicios AWS</p>
                     <div class="detalle-habilidad">
                         <p>Gestión y optimización de servicios en la nube para escalabilidad, seguridad y coste efectividad, especializado en el ecosistema de AWS.
-
-                            Computación en la Nube: Configuración y mantenimiento de sistemas escalables y tolerantes a fallos en AWS.
-                            Servicios AWS Específicos: Experiencia con [lista los servicios de AWS que manejas], diseñando soluciones seguras y optimizadas para la nube.</p>
+                    
+                            Computación en la Nube: Configuración y mantenimiento de sistemas escalables y tolerantes a fallos en AWS utilizando Elastic Compute Cloud (EC2), Elastic Kubernetes Service (EKS), y Elastic Beanstalk para despliegues rápidos y gestión simplificada.
+                    
+                            Servicios AWS Específicos: Experiencia con Amazon Simple Storage Service (S3) para almacenamiento de objetos, AWS Lambda para computación sin servidor, Amazon RDS para bases de datos relacionales, y AWS CloudFormation para la infraestructura como código, diseñando soluciones seguras y optimizadas para la nube.</p>
                     </div>
                 </div>
                 <div class="habilidad" onclick="toggleDetail(3)">
@@ -175,7 +180,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="proyectos" class="projects container" style="margin-bottom: 9%;">
@@ -185,34 +189,12 @@
                 <a href="http://mezcal.amsidesign.com/" class="project-link">
                     <img src="{% static 'img/mezcal.png' %}" alt="Arquitectura de Software">
                     <div class="overlay">
-                        <h3>Proyecto 1</h3>
-                        <p>Descripción del proyecto 1.</p>
+                        <h3>Reservación de Tours en Palenques</h3>
                     </div>
                 </a>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 project">
-                <a href="http://mezcal.amsidesign.com/" class="project-link">
-                    <img src="{% static 'img/mezcal.png' %}" alt="Arquitectura de Software">
-                    <div class="overlay">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción del proyecto 2.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 project">
-                <a href="http://mezcal.amsidesign.com/" class="project-link">
-                    <img src="{% static 'img/mezcal.png' %}" alt="Arquitectura de Software">
-                    <div class="overlay">
-                        <h3>Proyecto 1</h3>
-                        <p>Descripción del proyecto 1.</p>
-                    </div>
-                </a>
-            </div>
-            
+            </div>            
         </div>
     </section>
-
-    
 
     <section id="contacto" class="contacto-section">
         <div class="contacto-container">
@@ -263,9 +245,14 @@
         </button>
       </div>
     </div>
-  </div>
+</div>
 
 <script>
+
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('is-active');
+    });
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -308,10 +295,8 @@
             });
         });
 
-       
         var target = document.querySelector('#sobre-mi');
         observer.observe(target);
-
 
         const form = document.querySelector('form');
         form.addEventListener('submit', function(e) {
@@ -348,6 +333,7 @@
             });
         });
     });
+
     function toggleDetail(index) {
         // Obtén la tarjeta de habilidad y sus detalles
         var habilidad = document.getElementsByClassName('habilidad')[index];
@@ -369,7 +355,6 @@
         $('#habilidadesModal').modal('show');
     }    
 
-
     var habilidades = document.querySelectorAll('.habilidad');
     var currentIndex = 0;
 
@@ -377,7 +362,6 @@
         toggleDetail(habilidades[index]);
         currentIndex = index;
     }
-
 
     function navigate(step) {
         var modalBody = document.getElementById('habilidadesModal').querySelector('.modal-body');

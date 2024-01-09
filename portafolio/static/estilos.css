@@ -5,6 +5,10 @@ body {
     padding: 0;
 }
 
+.nav-links.is-active {
+    display: block;
+}
+
 /* Estilos del Header */
 header {
     background-color: #333;
@@ -349,7 +353,6 @@ footer {
 .navbar {
     display: flex;
     justify-content: space-between;
-    /* Esto asegura que los contenedores estén en los extremos opuestos */
     align-items: center;
 }
 
@@ -457,18 +460,15 @@ footer {
     }
 
     .navbar.active ul {
-        display: flex;
-        /* Mostrar la lista de navegación cuando esté activa */
+        display: none !important;
     }
 
     .section {
         padding: 50px 20px;
-        /* Más padding en dispositivos pequeños */
     }
 
     .contacto-section {
         clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-        /* Ajuste del borde irregular para pantallas más pequeñas */
     }
 }
 
@@ -603,17 +603,9 @@ footer {
 
 .btn:hover {
     background-color: #003d82;
+    color: white !important;
 }
 
-.btn-cv::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: #0056b3;
-    transition: width 0.3s;
-    width: 0;
-    margin-top: 5px;
-}
 
 .btn-cv:hover::after {
     width: 100%;
@@ -876,7 +868,6 @@ footer {
 /* Botones de navegación estilizados */
 .btn-modal-nav {
     background-color: rgba(255, 255, 255, 0.3);
-    /* Fondo semi-transparente */
     border: none;
     /* Sin bordes */
     color: white;
@@ -913,7 +904,6 @@ footer {
 /* Esconder los botones de navegación cuando no hay hover */
 .btn-modal-nav {
     opacity: 0.5;
-    /* Semi-transparente por defecto */
     transition: opacity 0.3s;
     /* Transición suave para el hover */
 }
