@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.conf import settings
 from .forms import ContactForm
+from django.http import HttpResponse
 
 def index(request):
     proyectos = [
@@ -57,3 +58,6 @@ def send_contact_email(request):
             return JsonResponse({'status': 'success', 'message': 'Correo enviado satisfactoriamente.'})
         else:
             return JsonResponse({'status': 'error', 'message': 'Formulario inválido.'})
+        
+def health_check(request):
+    return HttpResponse("OK", content_type="text/plain")
